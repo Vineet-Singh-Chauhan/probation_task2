@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root{
+    --bgcolor:#047aed;
+    --seccolor:#1c3fa8;
+    --dark-color:#002240;
+    --light-color:#f4f4f4;
+    --success-color:#5cb85c;
+    --error-color:#d9534f;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color:#333;
+    line-height: 1.6;
+}
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration: none;
+    color:#333;
+}
+h1,h2{
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+p{
+margin:10px 0;
+}
+
+img{
+    width:100%;
+}
+
+pre,code{
+    background: #333;
+    color:white;
+    padding: 10px;
+}
+
+
+/* ----------------------- Navbar ----------------------------- */
+
+
+.navbar{
+    background: var(--bgcolor);
+    color:white;
+    height:70px;
+    font-size: 1.2rem;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color:white;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.navbar a:hover{
+    border-bottom:3px white solid;
+}
+
+
+
+/*------------------------------- showcase ------------------------------------*/
+
+
+.showcase{
+    height:400px;
+    background: var(--bgcolor);
+    color:white;
+    position:relative;
+}
+
+.showcase-text{
+    animation: slideinfromleft 1s ease-in;
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p{
+    margin:20px 0;
+}
+
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap:30px;
+    overflow: visible;
+    
+}
+
+.showcase-form{
+    position:relative;
+    top:60px;
+    height: 350px;
+    width: 400px;
+    padding:40px;
+    z-index: 200;
+    justify-self: flex-end;
+    animation: slideinfromright 1s ease-in;
+}
+
+.showcase-form .form-control{
+    margin:30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border:0;
+    border-bottom: 1px gray solid;
+    width:100%;
+    padding:3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus{
+    outline:none;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor:pointer;
+    background:var(--bgcolor);
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+.btn-outline{
+    border:1px white solid;
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
+
+.showcase::before,
+.showcase::after{
+    content: '';
+    position:absolute;
+    height:100px;
+    width:100%;
+    bottom:-70px;
+    right: 0;
+    left: 0;
+    background:white;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+
+/*------------------------------- stats -------------------------------------*/
+.stats{
+    padding-top:100px;
+    animation: slideinfrombottom 1s ease-in;
+}
+
+.stats-heading{
+    max-width:500px;
+    margin: 0 auto;
+}
+
+.stats .grid p{
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.stats .grid h3{
+    font-size: 35px;
+}
+
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid>*:first-child{
+    grid-column: 1/span 2;
+    grid-row:1/span 2;
+}
+
+/*--------------------- cloud --------------------------*/
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/*---------------------lnggauges-----------------------*/
+.languages .flex{
+    flex-wrap:wrap;
+}
+
+.langauges .card{
+    text-align:center;
+    margin:18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4{
+    font-size:20px;
+    margin-bottom:10px;
+}
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+
+
+/*-------------------------------features page----------------------------------------*/
+.features{
+    height: auto;
+}
+
+.features img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.platform img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.mega-grid .card>i{
+    margin-right: 10px;
+}
+
+.mega-grid .grid{
+    padding: 30px;
+}
+
+.mega-grid .grid>:first-child{
+    grid-column:1/span 3 ;
+}
+
+.mega-grid .grid>:nth-child(2){
+    grid-column:1/span 2 ;
+}
+
+
+
+
+
+/*----------------------docs page-------------------------------*/
+.docs{
+    height: auto;
+}
+
+.docs img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.main h3{
+    margin: 20px 0;
+}
+
+.main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items:flex-start;
+}
+.main nav li{
+    font-size:17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom:1px #ccc solid;
+    
+}
+
+.main .bg-light a:hover{
+    font-weight: bold;
+}
+
+
+
+/*---------------------footer--------------------------*/
+.footer .social a{
+    margin: 0 10px;
+}
+
+@keyframes slideinfromleft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideinfromright{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideinfromtop{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideinfrombottom{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/*------------------responsive------------------------*/
+
+
+/*tablets  and under*/
+@media(max-width:800px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .footer .grid,
+    .mega-grid .grid,
+    .features .grid,
+    .platform .grid,
+    .mega-grid .grid,
+    .docs .grid,
+    .main .grid{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+    }
+
+    .showcase{
+        height:auto;
+    }
+    
+    .showcase-text{
+        text-align:center;
+        margin-top:40px;
+        animation: slideinfromtop 1s ease-in;
+    }
+
+    .showcase-form{
+        justify-self:center;
+        margin:auto;
+        animation: slideinfrombottom 1s ease-in;
+    }
+    .cli .grid>*:first-child{
+        grid-column: 1;
+        grid-row:1;
+    }
+    
+    .features,
+    .platform,
+    .docs,
+    .main{
+        text-align:center;
+    }
+
+   
+    .features img,
+    .platform img,
+    .docs img,
+    .main img{
+        justify-self:center;
+    }
+
+    .mega-grid .grid>*:first-child,
+    .mega-grid .grid>*:nth-child(2){
+        grid-column:1;
+    }
+
+    
+
+}
+
+
+/*mobiles*/
+@media(max-width:500px){
+    .navbar{
+        height:110px;
+
+    }
+    
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding:10px;
+        background: rgba(0, 0, 0, 0.11);
+    }
+}
+

@@ -379,7 +379,7 @@ pre,code{
         justify-self:center;
         margin:auto;
         animation: slideinfrombottom 1s ease-in;
-        width:330px;
+        width:300px;
     }
     .cli .grid>*:first-child{
         grid-column: 1;

@@ -92,6 +92,8 @@ pre,code{
 
 .showcase-text{
     animation: slideinfromleft 1s ease-in;
+    padding: 0 20px;
+    padding-right:30px;
 }
 
 .showcase h1{
@@ -215,6 +217,7 @@ pre,code{
     text-align:center;
     margin:18px 10px 40px;
     transition: transform 0.2s ease-in;
+    
 }
 
 .languages .card h4{
@@ -230,6 +233,7 @@ pre,code{
 /*-------------------------------features page----------------------------------------*/
 .features{
     height: auto;
+    
 }
 
 .features img{
@@ -344,7 +348,7 @@ pre,code{
 
 
 /*tablets  and under*/
-@media(max-width:800px){
+@media(max-width:830px){
     .grid,
     .showcase .grid,
     .stats .grid,
@@ -375,6 +379,7 @@ pre,code{
         justify-self:center;
         margin:auto;
         animation: slideinfrombottom 1s ease-in;
+        width:330px;
     }
     .cli .grid>*:first-child{
         grid-column: 1;

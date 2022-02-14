@@ -216,7 +216,7 @@ pre,code{
 .langauges .card{
     text-align:center;
     margin:18px 10px 40px;
-    transition: transform 0.2s ease-in;
+    /* transition: transform 1s ease-in-out; */
     
 }
 .langcard{
@@ -231,6 +231,7 @@ pre,code{
 }
 .languages .card:hover{
     transform: translateY(-15px);
+    transition: transform 0.2s ease-in-out;
 }
 
 
